@@ -4,65 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: #f0f0f0;
-      }
-
-      #calculator {
-        background-color: rgb(63, 63, 63);
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 200px;
-      }
-      #display {
-        width: 100%;
-        height: 40px;
-        text-align: right;
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-      .operator {
-        background-color: rgb(255, 165, 0);
-      }
-      button {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        margin: 5px;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        background-color: rgb(112, 112, 112);
-        color: white;
-      }
-      #keys {
-        display: flex-wrap;
-        background-color: rgb(65, 65, 65);
-        margin-bottom: 10px;
-      }
-      .last-row {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-        margin-top: 10px;
-      }
-      button:hover {
-        background-color: rgb(85, 85, 85);
-      }
-      .operator:hover {
-        background-color: rgb(255, 140, 0);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Simple Calculator</h1>
     <br />
+    <div class="bodyy">
     <div id="calculator">
       <input type="text" id="display" disabled />
       <br />
@@ -91,7 +38,7 @@
         <button type="button" onclick="appendToDisplay('/')" class="operator">
           /
         </button>
-        <button type="button" onclick="appendToDisplay('.')" class="operator">
+        <button type="button" onclick="appendToDisplay('0')" >0</button>
           .
         </button>
         <button type="button" onclick="clearDisplay()" class="operator">
@@ -100,23 +47,48 @@
         <button type="button" onclick="calculate()" class="operator">=</button>
       </div>
     </div>
+    </div>
+     <footer
+      style="
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 400px;
+        font-family: Arial, sans-serif;
+      "
+    >
+      <div style="max-width: 800px; margin: 0 auto">
+        <p style="margin: 5px 0">
+          © 2025 Ayanda AyandaLuthuli. All rights reserved.
+        </p>
+        <p style="margin: 5px 0; font-size: 0.9em">
+          Created with ❤️ for better productivity
+        </p>
+        <div style="margin-top: 10px">
+          <a
+            href="https://github.com/AyandaLuthuli"
+            target="_blank"
+            style="color: #4da6ff; margin: 0 10px; text-decoration: none"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ayanda-luthuli-b555b9348"
+            target="_blank"
+            style="color: #4da6ff; margin: 0 10px; text-decoration: none"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="ayandaalton2003@gmail.com"
+            style="color: #4da6ff; margin: 0 10px; text-decoration: none"
+          >
+            Email
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
-  <script>
-    const display = document.getElementById("display");
-    function appendToDisplay(value) {
-      display.value += value;
-    }
-
-    function clearDisplay() {
-      display.value = "";
-    }
-
-    function calculate() {
-      try {
-        display.value = eval(display.value);
-      } catch (error) {
-        display.value = "Error";
-      }
-    }
-  </script>
+  <script src="javasc.js"></script>
 </html>
